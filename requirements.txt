@@ -1,0 +1,12 @@
+transformers
+datasets
+sentence-transformers
+faiss-cpu
+scikit-learn
+gradio
+pdfplumber
+beautifulsoup4
+torch
+accelerate
+evaluate
+nltk
