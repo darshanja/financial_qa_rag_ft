@@ -23,8 +23,19 @@ build/
 .DS_Store
 Thumbs.db
 
-# Model files
-models/fine_tuned_model/model.safetensors
-models/fine_tuned_model/*.bin
-models/*/pytorch_model.bin
-models/*/*.safetensors
+# Model files - exclude all model files and directories except README
+models/*
+!models/README.md
+!models/.gitkeep
+
+# Specific model file extensions wherever they may be
+*.pt
+*.bin
+*.safetensors
+*.model
+*.onnx
+*.pth
+*.h5
+*.ot
+*.msgpack
+*.pb
