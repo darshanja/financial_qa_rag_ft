@@ -22,3 +22,9 @@ build/
 # System Files
 .DS_Store
 Thumbs.db
+
+# Model files
+models/fine_tuned_model/model.safetensors
+models/fine_tuned_model/*.bin
+models/*/pytorch_model.bin
+models/*/*.safetensors
