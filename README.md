@@ -4,6 +4,22 @@ This project implements and compares two approaches for answering questions abou
 1. **Retrieval-Augmented Generation (RAG)**: Combines hybrid document retrieval with generative language models
 2. **Fine-Tuned Language Model (FT)**: Direct fine-tuning of a small language model on financial Q&A
 
+## 🚀 Quick Start
+
+### Model Files
+Due to file size limitations, model files are not included in this repository. To use the system:
+
+1. Download the fine-tuned model from [Hugging Face Hub](https://huggingface.co/models) (link to be added)
+2. Place the downloaded files in the following structure:
+   ```
+   models/
+   └── fine_tuned_model/
+       ├── config.json
+       ├── model.safetensors
+       ├── tokenizer.json
+       └── ...
+   ```
+
 ## 🌟 Key Features
 
 ### RAG System
