@@ -11,7 +11,7 @@ def download_pdf(url, dest_path):
 if __name__ == "__main__":
     os.makedirs("data/raw", exist_ok=True)
     reports = {
-        "2023": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ALL_2023.pdf",
+        "2023": "https://www.annualreports.com/HostedData/AnnualReports/PDF/NYSE_ALL_2023.pdf",        
         "2022": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ALL_2022.pdf",
     }
 

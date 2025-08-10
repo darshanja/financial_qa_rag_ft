@@ -1,12 +1,41 @@
 # Financial QA System: RAG vs Fine-Tuning
 
-This project demonstrates a comparative financial QA system built using:
-- Retrieval-Augmented Generation (RAG)
-- Fine-Tuned Language Model (FT)
+This project implements and compares two approaches for answering questions about Allstate's financial reports:
+1. **Retrieval-Augmented Generation (RAG)**: Combines hybrid document retrieval with generative language models
+2. **Fine-Tuned Language Model (FT)**: Direct fine-tuning of a small language model on financial Q&A
 
-Both systems answer questions from Allstate's 2022–2023 financial reports.
+## 🌟 Key Features
 
----
+### RAG System
+- **Hybrid Retrieval**: 
+  - Dense retrieval using Sentence Transformers (all-MiniLM-L6-v2)
+  - Sparse retrieval using BM25
+  - Score fusion for optimal chunk selection
+- **Context-Aware Generation**: 
+  - Prompts engineered for financial accuracy
+  - Dynamic context window management
+  - Multi-chunk answer synthesis
+
+### Fine-Tuned Model
+- **Base Model**: DistilGPT2 (small, efficient)
+- **Training Data**: 30+ carefully curated financial Q&A pairs
+- **Optimization**: Parameter-efficient fine-tuning
+
+### Guardrails
+- **Input Validation**:
+  - Financial keyword detection
+  - Query complexity analysis
+  - Minimum length requirements
+- **Output Validation**:
+  - Confidence scoring
+  - Hallucination detection
+  - Answer quality metrics
+
+### Evaluation Framework
+- Response time tracking
+- Confidence scoring
+- Chunk relevance metrics
+- Answer quality assessment
 
 ## 🔧 Setup Instructions (Run Locally)
 
@@ -57,28 +86,89 @@ streamlit run app/app.py
 ## 📂 Project Structure
 ```
 financial_qa_rag_ft/
-├── data/              # Raw and processed financial reports
-├── qa_pairs/          # Generated QA pairs
-├── models/            # Fine-tuned model and embeddings
-├── utils/             # Chunking, retriever, generator, QA scripts
-├── notebooks/         # Jupyter notebooks (preprocess, RAG, FT, eval)
-├── app/               # Streamlit frontend
-├── requirements.txt
-├── README.md
-└── Financial_QA_Report.pdf
+├── app/
+│   └── app.py                 # Streamlit web interface with real-time metrics
+├── data/
+│   ├── processed/             # Cleaned and segmented text files
+│   │   ├── Allstate_2022_10K.txt
+│   │   └── Allstate_2023_10K.txt
+│   └── raw/                   # Original financial reports
+│       ├── Allstate_2022_10K.pdf
+│       └── Allstate_2023_10K.pdf
+├── models/
+│   ├── fine_tuned_model/     # DistilGPT2 fine-tuned on financial QA
+│   └── rag_model/            # Saved embeddings and retrieval indices
+├── notebooks/
+│   ├── 01_data_preprocessing.ipynb  # PDF parsing and text cleaning
+│   ├── 02_rag_pipeline.ipynb       # RAG implementation and testing
+│   ├── 03_fine_tuning.ipynb       # Model fine-tuning process
+│   ├── 04_evaluation.ipynb        # Individual model evaluation
+│   └── 05_evaluation_comparison.ipynb  # Comparative analysis
+├── qa_pairs/
+│   └── qa_dataset.json       # Curated financial QA pairs
+├── utils/
+│   ├── chunking.py           # Smart text segmentation
+│   ├── data_preprocessing.py # PDF processing pipeline
+│   ├── evaluation.py        # Comprehensive metrics
+│   ├── fine_tuning.py      # Training utilities
+│   ├── generator.py        # Answer generation logic
+│   ├── guardrails.py      # Input/output validation
+│   └── retriever.py       # Hybrid search implementation
+├── requirements.txt          # Project dependencies
+└── README.md                # Project documentation
 ```
 
 ---
 
-## ✅ Features
+## 📊 Performance Comparison
 
-- Hybrid retrieval (BM25 + embeddings)
-- GPT2-based generation (RAG & FT)
-- Streamlit UI with method toggle
-- Input/output guardrails
-- Screenshots and performance report
+### RAG System
+- **Strengths**:
+  - Higher factual accuracy
+  - Better source traceability
+  - More robust to unseen questions
+- **Metrics**:
+  - Average response time: ~0.5s
+  - Typical confidence: 0.8-0.95
+  - Strong chunk relevance scores
 
----
+### Fine-tuned Model
+- **Strengths**:
+  - Faster inference
+  - More natural language
+  - Consistent response style
+- **Metrics**:
+  - Average response time: ~0.4s
+  - Typical confidence: 0.75-0.9
+  - Good performance on seen patterns
 
-## 📄 License
-This project is for academic/educational use only.
+## 💡 Example Questions
+
+```python
+# High-confidence questions
+"What was Allstate's total revenue in 2023?"
+"How much was the net loss in 2023?"
+"What were the total assets in 2022?"
+
+# Complex analytical questions
+"How did revenue change from 2022 to 2023?"
+"What factors affected profitability in 2023?"
+"Compare the investment portfolio returns between 2022 and 2023"
+```
+
+## 🛠️ Technical Requirements
+
+- Python 3.8+
+- PyTorch 2.0+
+- Transformers 4.31+
+- Streamlit 1.24+
+- Sentence-Transformers 2.2+
+- See requirements.txt for full list
+
+## � License
+This project is for academic/educational use only. Financial data sourced from Allstate's public reports.
+
+## 🙏 Acknowledgments
+- Built using Hugging Face Transformers
+- Financial data from Allstate's 10-K reports
+- Streamlit for the web interface

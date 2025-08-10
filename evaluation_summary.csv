@@ -1,0 +1,7 @@
+method,category,confidence,response_time
+Fine-tuned,high_confidence,1.0,4.224
+Fine-tuned,irrelevant,1.0,4.005
+Fine-tuned,low_confidence,1.0,4.007
+RAG,high_confidence,1.0,14.159
+RAG,irrelevant,1.0,12.614
+RAG,low_confidence,1.0,14.384

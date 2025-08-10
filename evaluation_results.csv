@@ -1,0 +1,82 @@
+question,method,answer,confidence,response_time,metrics,category
+What was Allstate's total revenue in 2023?,RAG,"$2.9 billion of total revenues (in billions), including $1.7 billion",1.0,15.31966757774353,{'confidence': 1.0},high_confidence
+What was Allstate's total revenue in 2023?,Fine-tuned,"Q: What was Allstate's total revenue in 2023?
+A: $2.4 billion, which included $500 million in the U.S. and $600 million in Canada.
+Q: What's the number of states that have ever seen a significant jump in its revenue?
+A: In the U",1.0,4.6598968505859375,{'confidence': 1.0},high_confidence
+What were Allstate's total assets in 2022?,RAG,"Allstate's net income in 2022 in non-state assets was $8. 6 billion as of December 31, 2022. The sum is $8. 6 billion as of December 31, 2022",1.0,12.965020179748535,{'confidence': 1.0},high_confidence
+What were Allstate's total assets in 2022?,Fine-tuned,"Q: What were Allstate's total assets in 2022?
+A: The average assets in the company's most recent fiscal year were $1.4 billion, up from $1.5 billion in 2012. The company's net worth was $1.9 billion, up from $1.9 billion in 2012.",1.0,4.371333837509155,{'confidence': 1.0},high_confidence
+How much was the net income in 2023?,RAG,"Net income is $38.0 million compared to reported Adjusted Net Income of $39.0 million.
+
+PEO CAP Avg. Other TSR TSR All TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer TSR CEO TSR
+
+CAP Avg. Other TSR TSR Peer T",1.0,14.190822124481201,{'confidence': 1.0},high_confidence
+How much was the net income in 2023?,Fine-tuned,"Q: How much was the net income in 2023?
+A: In 2023, the net income was about $5.5 billion. It was $3.7 billion per year. It was $2.8 billion per year.
+Q: What was the net income in 2023?
+A:",1.0,3.6399378776550293,{'confidence': 1.0},high_confidence
+What was the trend in operating expenses between 2022 and 2023?,RAG,"During the past three years the company maintained the record as the most profitable and profitable company in the U.S. in terms of operating expenses.
+
+The company reported a net income of $42 million in the year ended December 31, 2022. This is a $4 million increase from the previous year and a $3 million decrease from the previous two years.
+
+The company reported operating expenses of $17.1 million in the year ended December 31, 2022 compared to the previous year. This is a $3 million increase from the previous year and a $3 million decrease from the previous two years. The company reported operating expenses of $15.4 million in the year ended December 31, 2022 compared to the previous year.",1.0,13.697541952133179,{'confidence': 1.0},low_confidence
+What was the trend in operating expenses between 2022 and 2023?,Fine-tuned,"Q: What was the trend in operating expenses between 2022 and 2023?
+A: In terms of operating expenses, we're starting to see a lot of growth in the first quarter of that year. And a lot of that growth, we're beginning to see in the second quarter of that year.
+Q: So you're seeing",1.0,3.583775281906128,{'confidence': 1.0},low_confidence
+How did the company's financial performance change from 2022 to 2023?,RAG,"The company experienced a series of changes that could result in a change in performance by the company.
+
+The company has made significant progress on its internal performance measures. For example, performance-based
+
+performance, similar to the performance-based results reported by ComScore, was higher for the quarter (28.6% for the quarter ended Dec. 31, 2012 compared to
+
+the quarter ended Sept. 30, 2011) and the quarter ended Sept. 30, 2010.
+
+The Company's total and diluted net income for the quarter ended December 31, 2012 was $9.4 billion, or $2.8 percent, lower than the
+
+average of the prior three years and a larger than average of the prior three years",1.0,14.294215202331543,{'confidence': 1.0},low_confidence
+How did the company's financial performance change from 2022 to 2023?,Fine-tuned,"Q: How did the company's financial performance change from 2022 to 2023?
+A: Our financial results have been pretty good, and there are still lots of things we need to improve on. I've been involved with the company for a long time, but I think I'd like to say that we are not having a financial crisis right",1.0,3.450639486312866,{'confidence': 1.0},low_confidence
+What factors affected profitability in 2023?,RAG,"The reason for the decline in the amount of net investment income has been attributed to the large number of long-term investors who are not paying any dividends. We expect these investors to continue to invest for the foreseeable future as growth in the long-term may not continue as anticipated due to the continued increase in the cost of capital in the short-term.
+
+We expect long-term investors to continue to invest for the foreseeable future as growth in the long-term may not continue as anticipated due to the continued increase in the cost of capital in the short-term. We believe the potential for a large number of investors to return to investing for the long-term has remained moderate.
+
+We expect the potential for a large number of investors",1.0,15.16062068939209,{'confidence': 1.0},low_confidence
+What factors affected profitability in 2023?,Fine-tuned,"Q: What factors affected profitability in 2023?
+A: We expect to see a net loss of $4.5 billion in 2023, but we're also confident, as we always should, that we can recover a lot.
+But we have to be very careful with the number of things that we",1.0,4.986178874969482,{'confidence': 1.0},low_confidence
+What is the capital of France?,RAG,Our capital is $2. 9 billion. We have invested $2. 9 billion in French banks and we have received $2. 9 billion in foreign capital for our banking activities. We have raised about $2. 9 billion from outside investors and in the process of doing so we have paid out over $2. 9 billion,1.0,13.289393186569214,{'confidence': 1.0},irrelevant
+What is the capital of France?,Fine-tuned,"Q: What is the capital of France?
+A: The capital is Paris.
+Q: What is the capital of Belgium?
+A: The capital is Brussels.
+Q: What is the capital of Czech Republic?
+A: The capital is Prague.
+Q: Where were the Jews?",1.0,3.544739246368408,{'confidence': 1.0},irrelevant
+How tall is Mount Everest?,RAG,"The Mount Everest (Mt. Everest) National Park is a national monument consisting of over 2,000 villages built over a five-year period beginning in 1792. The peak and the summit of Mount Everest lies in the middle of the Himalayas, which were named for the four mountains of which Mount Everest is one. The other three are the Himalayas and the Himalayas were named after the four mountain systems, which were formed by the river Ganges. The national park's four main peaks are the Mt. Everest (Mt. Everest), the Pyramids of Giza (Mt. Pyramids of Giza) and the Pyramids of Giza. The Pyramids of Giza and the Pyramids of G",1.0,11.329627275466919,{'confidence': 1.0},irrelevant
+How tall is Mount Everest?,Fine-tuned,"Q: How tall is Mount Everest?
+A: It was named after the mountain as it was the tallest mountain in the world by Kathmandu's Kathmandu people.
+KATHMANDU: The mountain is approximately 13,000 meters (22,000 feet), which means that it",1.0,4.297003507614136,{'confidence': 1.0},irrelevant
+Who won the World Cup in 2022?,RAG,"Brazil, Russia, Ukraine, China, Iran, Russia, Turkey, India
+
+The answer to this question is: the entire world!
+
+Source: http://www.allstate.com/finance/news/2017/04/19/2016-11-19/18-27-12-19/
+
+The answer to this question is: Russia, Ukraine, China, Iran, Russia, Turkey, India
+
+Source: http://www.allstate.com/finance/news/2017/04/19/2016-11-19/18-27-12-19/18-27-12-19/18-27-12-19/18-27-12-19/",1.0,13.222719192504883,{'confidence': 1.0},irrelevant
+Who won the World Cup in 2022?,Fine-tuned,"Q: Who won the World Cup in 2022?
+A: It's all about the players. If you're a team like Arsenal then you're going to win at least three games in the World Cup, and so it's not about the fans. We're a team who's going to take care of business",1.0,4.174057722091675,{'confidence': 1.0},irrelevant
