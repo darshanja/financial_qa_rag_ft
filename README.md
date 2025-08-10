@@ -9,15 +9,12 @@ This project implements and compares two approaches for answering questions abou
 ### Model Files
 Due to file size limitations, model files are not included in this repository. To use the system:
 
-1. Download the fine-tuned model from [Hugging Face Hub](https://huggingface.co/models) (link to be added)
-2. Place the downloaded files in the following structure:
+1. The fine-tuned model is hosted on [Hugging Face Hub](https://huggingface.co/jayyd/financial-qa-model)
+2. The application automatically loads the model directly from Hugging Face when running
+3. If you want to download the model locally, you can use the Hugging Face CLI:
    ```
-   models/
-   └── fine_tuned_model/
-       ├── config.json
-       ├── model.safetensors
-       ├── tokenizer.json
-       └── ...
+   pip install huggingface_hub
+   python -c "from huggingface_hub import snapshot_download; snapshot_download('jayyd/financial-qa-model', local_dir='models/fine_tuned_model')"
    ```
 
 ## 🌟 Key Features
@@ -96,6 +93,8 @@ Run: notebooks/03_fine_tuning.ipynb
 ```bash
 streamlit run app/app.py
 ```
+
+The Streamlit app will automatically load the fine-tuned model from Hugging Face Hub (jayyd/financial-qa-model) when running in "Fine-Tuned" mode. No local model files are needed.
 
 ---
 
