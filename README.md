@@ -181,7 +181,8 @@ financial_qa_rag_ft/
 - See requirements.txt for full list
 
 ## License
-This project is for academic/educational use only. Financial data sourced from Allstate's public reports.
+This project is licensed under the MIT License. See the LICENSE file for details.
+Financial data sourced from Allstate's public reports and is used for academic/educational purposes.
 
 ## Acknowledgments
 - Built using Hugging Face Transformers

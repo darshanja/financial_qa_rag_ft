@@ -30,7 +30,7 @@ def load_retriever():
     texts = []
     for file in os.listdir("data/processed"):
         if file.endswith(".txt") or file.endswith(".json"):
-            with open(os.path.join("data/processed", file), "r") as f:
+            with open(os.path.join("data/processed", file), "r", encoding="utf-8") as f:
                 texts.append(f.read())
     chunks = smart_chunk_text(texts, chunk_size=100)
     embedder = SentenceTransformer("all-MiniLM-L6-v2")

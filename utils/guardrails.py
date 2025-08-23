@@ -2,6 +2,29 @@
 Input and output validation for the Financial QA system.
 """
 
+_FINANCIAL_KEYWORDS = [
+    'revenue', 'profit', 'loss', 'income', 'expense',
+    'asset', 'liability', 'equity', 'cash', 'stock',
+    'share', 'dividend', 'market', 'financial', 'fiscal',
+    'quarter', 'annual', 'balance', 'statement', 'report',
+    'earnings', 'cost', 'price', 'allstate', 'insurance',
+    'catastrophe', 'policy', 'premium', 'underwriting', 'investment'
+]
+
+_HALLUCINATION_MARKERS = [
+    "I don't know",
+    "I'm not sure",
+    "I cannot",
+    "I don't have",
+    "not available",
+    "no information",
+    "as an AI",
+    "I am not able"
+]
+
+_MIN_CONFIDENCE_THRESHOLD = 0.3
+_MAX_QUERY_LENGTH = 500
+
 def validate_input(query: str) -> tuple[bool, str]:
     """
     Validate user input query.
@@ -20,16 +43,12 @@ def validate_input(query: str) -> tuple[bool, str]:
     if len(query.split()) < 2:
         return False, "Please enter a complete question."
     
+    # Check maximum length
+    if len(query) > _MAX_QUERY_LENGTH:
+        return False, f"Query is too long. Please limit your question to {_MAX_QUERY_LENGTH} characters."
+
     # Check if query is finance-related
-    financial_keywords = [
-        'revenue', 'profit', 'loss', 'income', 'expense',
-        'asset', 'liability', 'equity', 'cash', 'stock',
-        'share', 'dividend', 'market', 'financial', 'fiscal',
-        'quarter', 'annual', 'balance', 'statement', 'report',
-        'earnings', 'cost', 'price', 'allstate', 'insurance'
-    ]
-    
-    if not any(keyword.lower() in query.lower() for keyword in financial_keywords):
+    if not any(keyword.lower() in query.lower() for keyword in _FINANCIAL_KEYWORDS):
         return False, "Please ask a finance-related question about Allstate."
         
     return True, ""
@@ -50,20 +69,11 @@ def validate_output(answer: str, confidence: float) -> tuple[bool, str]:
         return False, "No answer generated."
     
     # Check if confidence is too low
-    if confidence < 0.3:
+    if confidence < _MIN_CONFIDENCE_THRESHOLD:
         return False, "Low confidence in answer. Please rephrase your question."
     
     # Check for potential hallucination markers
-    hallucination_markers = [
-        "I don't know",
-        "I'm not sure",
-        "I cannot",
-        "I don't have",
-        "not available",
-        "no information"
-    ]
-    
-    if any(marker.lower() in answer.lower() for marker in hallucination_markers):
+    if any(marker.lower() in answer.lower() for marker in _HALLUCINATION_MARKERS):
         return False, "Unable to find relevant information in the financial documents."
         
     return True, ""

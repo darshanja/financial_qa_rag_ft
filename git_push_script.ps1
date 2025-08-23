@@ -1,20 +1,36 @@
-# Git Commands for pushing to a new branch
+<#
+.SYNOPSIS
+    A script to automate creating a new Git branch, committing, and pushing.
+.DESCRIPTION
+    This script simplifies the process of creating a new feature branch, adding all current changes,
+    committing them with a message, and preparing to push to the remote repository.
+    It should be run from the root of the Git repository.
+.PARAMETER BranchName
+    The name of the new branch to create.
+.PARAMETER CommitMessage
+    The commit message for the changes.
+.EXAMPLE
+    .\git_push_script.ps1 -BranchName "feature/new-ui" -CommitMessage "Add new UI components"
+#>
+param (
+    [Parameter(Mandatory=$true)]
+    [string]$BranchName,
+    [Parameter(Mandatory=$true)]
+    [string]$CommitMessage
+)
 
-# 1. Make sure we're in the correct directory
-cd "C:/Users/jayyd/Documents/MTech/3rd sem/Conversational Ai/Assignment2/financial_qa_rag_ft"
+# 1. Create a new branch
+git checkout -b $BranchName
 
-# 2. Create a new branch called "huggingface-integration"
-git checkout -b huggingface-integration
-
-# 3. Add all files to the staging area
+# 2. Add all files to the staging area
 git add .
 
-# 4. Commit the changes
-git commit -m "Integrated Hugging Face model hosting and updated documentation"
+# 3. Commit the changes
+git commit -m $CommitMessage
 
-# 5. Push the branch to GitHub
-# (Uncomment and use this command if you want to push to GitHub)
-# git push -u origin huggingface-integration
+# 4. Push the branch to GitHub
+Write-Host "Branch '$BranchName' is ready to be pushed. Run the following command to push:"
+Write-Host "git push -u origin $BranchName" -ForegroundColor Green
 
-# 6. Display status
+# 5. Display status
 git status
