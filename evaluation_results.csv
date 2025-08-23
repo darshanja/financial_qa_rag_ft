@@ -1,3 +1,4 @@
+
 question,method,answer,confidence,response_time_seconds,metrics,category
 What was Allstate's total revenue in 2023?,RAG,$57.09 billion,0.56,63.24,{'confidence': 0.56},high_confidence
 What was Allstate's total revenue in 2023?,Fine-tuned,Allstate's total revenue in 2023 was $7.2 billion.,1.0,2.9,{'confidence': 1.0},high_confidence
@@ -17,4 +18,3 @@ What is the capital of France?,Fine-tuned,Please ask a finance-related question 
 How tall is Mount Everest?,RAG,Please ask a finance-related question about Allstate.,,,,irrelevant
 How tall is Mount Everest?,Fine-tuned,Please ask a finance-related question about Allstate.,,,,irrelevant
 Who won the World Cup in 2022?,RAG,Please ask a finance-related question about Allstate.,,,,irrelevant
-Who won the World Cup in 2022?,Fine-tuned,Please ask a finance-related question about Allstate.,,,,irrelevant
