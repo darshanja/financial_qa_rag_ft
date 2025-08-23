@@ -4,7 +4,7 @@ This project implements and compares two approaches for answering questions abou
 1. **Retrieval-Augmented Generation (RAG)**: Combines hybrid document retrieval with generative language models
 2. **Fine-Tuned Language Model (FT)**: Direct fine-tuning of a small language model on financial Q&A
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Model Files
 Due to file size limitations, model files are not included in this repository. To use the system:
@@ -17,7 +17,7 @@ Due to file size limitations, model files are not included in this repository. T
    python -c "from huggingface_hub import snapshot_download; snapshot_download('jayyd/financial-qa-model', local_dir='models/fine_tuned_model')"
    ```
 
-## Key Features
+## 🌟 Key Features
 
 ### RAG System
 - **Hybrid Retrieval**: 
@@ -98,7 +98,7 @@ The Streamlit app will automatically load the fine-tuned model from Hugging Face
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 ```
 financial_qa_rag_ft/
 ├── app/
@@ -135,7 +135,7 @@ financial_qa_rag_ft/
 
 ---
 
-## Performance Comparison
+## 📊 Performance Comparison
 
 ### RAG System
 - **Strengths**:
@@ -157,7 +157,7 @@ financial_qa_rag_ft/
   - Typical confidence: 0.75-0.9
   - Good performance on seen patterns
 
-## Example Questions
+## 💡 Example Questions
 
 ```python
 # High-confidence questions
@@ -171,7 +171,7 @@ financial_qa_rag_ft/
 "Compare the investment portfolio returns between 2022 and 2023"
 ```
 
-## Technical Requirements
+## 🛠️ Technical Requirements
 
 - Python 3.8+
 - PyTorch 2.0+
@@ -180,10 +180,10 @@ financial_qa_rag_ft/
 - Sentence-Transformers 2.2+
 - See requirements.txt for full list
 
-## License
+## � License
 This project is for academic/educational use only. Financial data sourced from Allstate's public reports.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 - Built using Hugging Face Transformers
 - Financial data from Allstate's 10-K reports
 - Streamlit for the web interface
