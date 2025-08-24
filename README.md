@@ -1,3 +1,17 @@
+The app is hosted on [Hugging Face SPACES](https://huggingface.co/spaces/jayyd/financial_qa_rag)
+---
+title: Financial QA — RAG vs FT
+emoji: 📊
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.45.0
+python_version: 3.10
+app_file: app/app.py
+pinned: false
+license: mit
+---
+
 # Financial QA System: RAG vs Fine-Tuning
 
 This project implements and compares two approaches for answering questions about Allstate's financial reports:
