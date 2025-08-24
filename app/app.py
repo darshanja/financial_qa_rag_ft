@@ -19,7 +19,7 @@ from utils.guardrails import validate_input, validate_output
 # Streamlit Page Config
 # ---------------------------
 st.set_page_config(page_title="Allstate Financial QA")
-st.title("📊 Allstate Financial QA System")
+st.title("Allstate Financial QA System")
 
 
 # ---------------------------

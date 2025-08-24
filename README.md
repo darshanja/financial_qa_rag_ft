@@ -1,3 +1,6 @@
+
+The app is hosted on [Hugging Face SPACES](https://huggingface.co/spaces/jayyd/financial_qa_rag)
+
 ---
 title: Financial QA — RAG vs FT
 emoji: 📊
