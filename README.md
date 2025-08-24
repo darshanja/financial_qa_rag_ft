@@ -63,7 +63,7 @@ Due to file size limitations, model files are not included in this repository. T
 - Chunk relevance metrics
 - Answer quality assessment
 
-## 🔧 Setup Instructions (Run Locally)
+## Setup Instructions (Run Locally)
 
 ### 1. Clone the Repository
 ```bash
